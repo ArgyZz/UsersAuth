@@ -1,19 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Application.Interfaces.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class UserController : ControllerBase
+	public class UserController : BaseController<IUserService>
 	{
-		[HttpGet(Name = "GetUser")]
+		//[HttpGet(Name = "GetUser")]
 
 
-		[HttpGet(Name = "GetAllUsers")]
+		//[HttpGet(Name = "GetAllUsers")]
 
-		[HttpPut(Name = "UpdateUser")]
+		//[HttpPut(Name = "UpdateUser")]
 
-		[HttpDelete(Name = "DeleteUser")]
+		//[HttpDelete(Name = "DeleteUser")]
 
 
 	}
