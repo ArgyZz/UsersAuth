@@ -25,6 +25,8 @@ using (var scope = app.Services.CreateScope())
 {
 	var dbContext = scope.ServiceProvider.GetRequiredService<EfCoreDbContext>();
 
+	dbContext.Database.Migrate();
+
 	if (!dbContext.Database.CanConnect())
 		throw new Exception("Could not connect to Database. Please check your connection string");
 }
